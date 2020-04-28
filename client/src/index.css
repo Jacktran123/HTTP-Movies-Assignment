@@ -33,7 +33,8 @@ body {
   width: 75%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .saved-list h3 {
@@ -64,6 +65,30 @@ body {
 .save-button:hover {
   background-color: green;
   color: white;
+  
+}
+
+.update{
+  color: black;
+  background: inherit;
+  right: 90px;
+  border: none;
+  top: 23px;
+  padding: 0;
+
+}
+.update:hover{
+  border: 1px solid lightblue;
+  color: white;
+  background-color: white;
+
+}
+.update button a{
+  text-decoration: none;
+  color: black;
+}
+.update button a:hover{
+  color: white;
 }
 
 .home-button {
@@ -74,4 +99,16 @@ body {
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.form-group .form-control{
+    width: 500px;
+    
+}
+form{
+  margin-left: 13%;
+}
+form button{
+  margin: 2%;
+
 }
