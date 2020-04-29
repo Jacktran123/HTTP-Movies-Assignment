@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import {Link} from 'react-router-dom';
-import { useParams } from "react-router-dom";
+import { useParams,useHistory } from "react-router-dom";
 import MovieCard from "./MovieCard";
 import {Button} from 'reactstrap';
 
 function Movie({ addToSavedList, movieList }) {
   const [movie, setMovie] = useState(null);
   const params = useParams();
+  const history=useHistory();
   console.log(params.id);
 
   const fetchMovie = (id) => {
@@ -28,6 +29,15 @@ function Movie({ addToSavedList, movieList }) {
   if (!movie) {
     return <div>Loading movie informations...</div>;
   }
+   
+  const deleteMovie=()=>{
+    axios.delete(`http://localhost:5000/api/movies/${params.id}`)
+    .then(res=> console.log(res))
+    .catch(err=> console.error(err));
+
+  }
+  
+  axios.post()
 
   return (
     <div className="save-wrapper">
@@ -42,7 +52,7 @@ function Movie({ addToSavedList, movieList }) {
       </div>
 
       <div className="save-button delete">
-          <i class="fas fa-window-close"></i>
+          <i className="fas fa-window-close" onClick={deleteMovie}></i>
       </div>
     </div>
   );
