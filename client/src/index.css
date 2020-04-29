@@ -57,7 +57,7 @@ body {
 .save-button {
   position: absolute;
   top: 25px;
-  right: 25px;
+  right: 110px;
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
@@ -71,7 +71,7 @@ body {
 .update{
   color: black;
   background: inherit;
-  right: 90px;
+  right: 190px;
   border: none;
   top: 23px;
   padding: 0;
@@ -89,6 +89,32 @@ body {
 }
 .update button a:hover{
   color: white;
+}
+
+.delete{
+  padding: 0;
+  right: 55px;
+  background: inherit;
+  border: none;
+  
+  
+}
+.delete:hover{
+  transform: translateY(-2px);
+  background: white;
+  cursor: pointer;
+}
+i:hover{
+  cursor: pointer;
+}
+i{
+  background: white;
+  padding: 0;
+  right: 55px;
+  color: red;
+  font-size: 1.9rem;
+  border-style: none;
+  
 }
 
 .home-button {

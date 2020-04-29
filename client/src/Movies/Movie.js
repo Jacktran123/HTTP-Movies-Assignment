@@ -40,6 +40,10 @@ function Movie({ addToSavedList, movieList }) {
       <div className="save-button update">
         <Button color='primary'><Link to={`/update-movie/${params.id}`} > Update </Link> </Button>
       </div>
+
+      <div className="save-button delete">
+          <i class="fas fa-window-close"></i>
+      </div>
     </div>
   );
 }
